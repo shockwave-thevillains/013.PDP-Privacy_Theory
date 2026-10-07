@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kamus Privasi Data</title>
+  <meta name="description" content="Glosarium interaktif istilah privasi & pelindungan data pribadi (UU PDP & GDPR): enkripsi, pseudonimisasi, consent, contractual necessity, dan lainnya — lengkap dengan contoh dan demo." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔐</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#glosarium" aria-label="Beranda">
+        <span class="brand-icon" aria-hidden="true">🔐</span>
+        <span>
+          <strong>Kamus Privasi Data</strong>
+          <small>Istilah UU PDP & GDPR, dijelaskan dengan contoh</small>
+        </span>
+      </a>
+      <nav class="tabs" role="tablist" aria-label="Navigasi utama">
+        <button role="tab" data-view="glosarium" aria-selected="true">📚 Glosarium</button>
+        <button role="tab" data-view="banding" aria-selected="false">🆚 Perbandingan</button>
+        <button role="tab" data-view="kuis" aria-selected="false">🎯 Kuis</button>
+        <button role="tab" data-view="tentang" aria-selected="false">ℹ️ Tentang</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- ================= GLOSARIUM ================= -->
+    <section id="view-glosarium" class="view" role="tabpanel">
+      <div class="hero">
+        <h1>Pahami istilah privasi, bukan sekadar menghafalnya.</h1>
+        <p>Setiap istilah dilengkapi definisi, analogi sehari-hari, contoh kasus nyata, kesalahpahaman umum, dan rujukan pasal UU PDP / GDPR. Beberapa istilah teknis punya <strong>demo interaktif</strong> 🧪.</p>
+      </div>
+
+      <div class="toolbar">
+        <label class="search">
+          <span aria-hidden="true">🔎</span>
+          <input id="search" type="search" placeholder="Cari istilah… (mis. enkripsi, consent, pseudonim)" autocomplete="off" />
+        </label>
+        <div class="chips" id="category-chips" aria-label="Filter kategori"></div>
+      </div>
+
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <div id="term-groups"></div>
+    </section>
+
+    <!-- ================= PERBANDINGAN ================= -->
+    <section id="view-banding" class="view" role="tabpanel" hidden>
+      <div class="hero">
+        <h1>Sering tertukar? Bandingkan berdampingan.</h1>
+        <p>Dua kelompok istilah yang paling sering membingungkan: teknik pelindungan data dan enam dasar hukum pemrosesan.</p>
+      </div>
+
+      <h2 class="section-title">🔐 Teknik pelindungan data</h2>
+      <div class="table-scroll"><table class="compare" id="compare-tech"></table></div>
+
+      <div class="callout">
+        <strong>💡 Cara cepat membedakan:</strong>
+        <ul>
+          <li><b>Enkripsi</b> = brankas berkunci (bisa dibuka dengan kunci).</li>
+          <li><b>Hashing</b> = sidik jari (tidak bisa dibalik, tetapi bisa dicocokkan).</li>
+          <li><b>Pseudonimisasi</b> = nama samaran (daftar nama asli disimpan terpisah).</li>
+          <li><b>Anonimisasi</b> = emas yang dilebur (asal-usulnya tidak bisa dilacak lagi).</li>
+        </ul>
+      </div>
+
+      <h2 class="section-title">⚖️ Enam dasar hukum pemrosesan (Pasal 20 UU PDP · Art. 6 GDPR)</h2>
+      <div class="basis-grid" id="basis-grid"></div>
+
+      <h2 class="section-title">🧭 Pohon keputusan sederhana</h2>
+      <ol class="decision">
+        <li>Apakah ada <b>peraturan</b> yang mewajibkan pemrosesan ini? → <a href="#term/kewajiban-hukum">Kewajiban hukum</a></li>
+        <li>Apakah Anda <b>instansi/badan</b> yang menjalankan mandat publik? → <a href="#term/tugas-publik">Tugas kepentingan umum</a></li>
+        <li>Apakah data <b>benar-benar diperlukan</b> untuk menjalankan kontrak dengan orang itu? → <a href="#term/kontrak">Kontrak</a></li>
+        <li>Apakah menyangkut <b>nyawa/keselamatan</b> dalam keadaan darurat? → <a href="#term/kepentingan-vital">Kepentingan vital</a></li>
+        <li>Apakah ada kepentingan wajar yang <b>lolos uji keseimbangan</b> dan sesuai ekspektasi orang itu? → <a href="#term/kepentingan-sah">Kepentingan sah</a></li>
+        <li>Jika tidak ada yang cocok, dan orang itu <b>benar-benar bebas memilih</b>? → <a href="#term/consent">Persetujuan</a></li>
+      </ol>
+      <p class="muted small">Urutan di atas hanya alat bantu berpikir — UU PDP tidak menetapkan hierarki di antara dasar hukum. Pilih yang paling sesuai fakta, dan tetapkan sebelum pemrosesan dimulai.</p>
+    </section>
+
+    <!-- ================= KUIS ================= -->
+    <section id="view-kuis" class="view" role="tabpanel" hidden>
+      <div class="hero">
+        <h1>Kuis: dasar hukum mana yang paling tepat?</h1>
+        <p>Baca studi kasus, pilih dasar hukumnya, lalu lihat penjelasannya.</p>
+      </div>
+      <div class="quiz" id="quiz"></div>
+    </section>
+
+    <!-- ================= TENTANG ================= -->
+    <section id="view-tentang" class="view" role="tabpanel" hidden>
+      <div class="hero">
+        <h1>Tentang aplikasi ini</h1>
+      </div>
+      <div class="prose">
+        <p>Kamus Privasi Data adalah glosarium edukatif yang menjelaskan istilah-istilah penting dalam pelindungan data pribadi, dengan rujukan ke:</p>
+        <ul>
+          <li><b>UU PDP</b> — Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (Indonesia).</li>
+          <li><b>GDPR</b> — Regulation (EU) 2016/679, General Data Protection Regulation (Uni Eropa).</li>
+        </ul>
+        <h3>🧪 Tentang demo</h3>
+        <p>Demo enkripsi dan hashing memakai <b>Web Crypto API</b> bawaan browser (AES-GCM 256-bit dengan PBKDF2, dan SHA-256). Semua proses berjalan lokal di browser Anda — tidak ada data yang dikirim ke server. Meski begitu, jangan memasukkan data pribadi asli ke demo.</p>
+        <h3>⚠️ Disclaimer</h3>
+        <p>Konten ini adalah materi edukasi, <b>bukan nasihat hukum</b>. Rujukan pasal disederhanakan untuk tujuan belajar; selalu verifikasi dengan teks resmi peraturan, peraturan pelaksana terbaru, dan konsultasikan kasus spesifik dengan praktisi hukum atau DPO.</p>
+        <h3>⌨️ Pintasan</h3>
+        <p><kbd>/</kbd> fokus ke pencarian · <kbd>Esc</kbd> tutup detail istilah.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Materi edukasi · bukan nasihat hukum · Rujukan: UU No. 27/2022 (UU PDP) &amp; GDPR</div>
+  </footer>
+
+  <!-- Detail istilah -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" data-close aria-label="Tutup">✕</button>
+      <div id="modal-body"></div>
+    </article>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/demos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
