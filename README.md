@@ -28,7 +28,13 @@ python3 -m http.server 8000
 
 > Demo enkripsi & hashing memakai Web Crypto API, yang hanya tersedia di `https://` atau `localhost`.
 
-Untuk dipublikasikan: aktifkan **GitHub Pages** (Settings → Pages → Deploy from branch → `main` / root).
+### 🌐 GitHub Pages
+
+Situs: **https://shockwave-thevillains.github.io/013.PDP-Privacy_Theory/**
+
+Aktifkan sekali saja: **Settings → Pages → Build and deployment → Source: _Deploy from a branch_ → Branch: `main`, folder `/ (root)` → Save**. Setelah ±1 menit situs aktif dan setiap push ke `main` akan ter-deploy otomatis.
+
+Semua path di aplikasi bersifat relatif sehingga berjalan di subpath `/013.PDP-Privacy_Theory/`, dan file `.nojekyll` membuat GitHub menyajikan file apa adanya tanpa diproses Jekyll.
 
 ## 🗂️ Struktur
 
